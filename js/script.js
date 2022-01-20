@@ -24,20 +24,23 @@ console.log(prezzoBiglietto);
 
 // sconto del 20% per minorenni
 let sconto20 = (prezzoBiglietto * 20 / 100);
+console.log(sconto20);
 
 // sconto del 40% per over 65
 let sconto40 = (prezzoBiglietto * 40 / 100);
+console.log(sconto40);
 
-
-
+// Calcolo del prezzo finale in base ad età con relativo sconto applicato
 if(eta < 18){
     let prezzoFinale = prezzoBiglietto - sconto20;
-    document.getElementById('Prezzo_biglietto_finale').innerHTML = prezzoFinale;
+    console.log(prezzoFinale);
+    document.getElementById('Prezzo_biglietto_finale').innerHTML = prezzoFinale.toFixed(2);
 }
 else if (eta >65){
     let prezzoFinale = prezzoBiglietto - sconto40;
-    document.getElementById('Prezzo_biglietto_finale').innerHTML = prezzoFinale;
+    console.log(prezzoFinale);
+    document.getElementById('Prezzo_biglietto_finale').innerHTML = prezzoFinale.toFixed(2);
 }
 else{
-    document.getElementById('Prezzo_biglietto_finale').innerHTML = prezzoBiglietto;
+    document.getElementById('Prezzo_biglietto_finale').innerHTML = prezzoBiglietto.toFixed(2);
 }
